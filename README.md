@@ -3,11 +3,8 @@ depositos = []
 saques = []
 
 valor_deposito = float(input("Digite o valor a ser depositado (R$): "))
-
 saldo += valor_deposito
-
 depositos.append(valor_deposito)
-
 valor_saque = float(input("Digite o valor a ser sacado (R$): "))
 
 if saldo >= valor_saque and len(saques) < 3 and valor_saque <= 500:
