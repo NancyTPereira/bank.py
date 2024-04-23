@@ -3,24 +3,31 @@ depositos = []
 saques = []
 
 valor_deposito = float(input("Digite o valor a ser depositado (R$): "))
+
 saldo += valor_deposito
+
 depositos.append(valor_deposito)
 
 valor_saque = float(input("Digite o valor a ser sacado (R$): "))
+
 if saldo >= valor_saque and len(saques) < 3 and valor_saque <= 500:
     saldo -= valor_saque
     saques.append(valor_saque)
+    
 else:
     print("Não é possível sacar esse valor. Verifique o saldo ou limite de saques.")
 
 valor_saque = float(input("Digite o valor a ser sacado (R$): "))
+
 if saldo >= valor_saque and len(saques) < 3 and valor_saque <= 500:
     saldo -= valor_saque
     saques.append(valor_saque)
+    
 else:
     print("Não é possível sacar esse valor. Verifique o saldo ou limite de saques.")
 
 print("\nExtrato:")
+
 for deposito in depositos:
     print(f"Depósito: R${deposito:.2f}")
 for saque in saques:
